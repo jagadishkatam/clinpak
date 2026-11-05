@@ -23,6 +23,7 @@
 #' @example inst/example.R
 #'
 calc_pchg <- function(data, aval=AVAL, base=BASE){
+  # this is to derive variables
   data %>% dplyr::mutate(
     CHG={{ aval }} - {{ base }},
     PCHG = dplyr::if_else(
